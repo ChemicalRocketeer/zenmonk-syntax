@@ -1,0 +1,357 @@
+@import "colors";
+
+
+atom-text-editor[mini], atom-text-editor.mini {
+ .scroll-view {
+    padding-left: 1px;
+  }
+}
+
+// MISC
+.syntax--text {
+  color: @code;
+}
+
+.syntax--comment {
+  color: @comment;
+}
+
+
+// INVALID TEXT
+.syntax--invalid.syntax--illegal, .syntax--invalid.syntax--deprecated {
+  background-color: @error;
+  color: @syntax-background-color;
+}
+
+
+// KEYWORDS
+.syntax--keyword {
+
+  color: @keyword;
+
+  &.syntax--control {
+    color: @keyword;
+  }
+
+  &.syntax--operator {
+    color: @keyword;
+    &.syntax--assignment {
+      color: @keyword;
+    }
+    &.syntax--new {
+      color: @keyword;
+    }
+  }
+
+  &.syntax--other {
+    &.syntax--important {
+      color: @keyword;
+    }
+    &.syntax--special-method {
+      color: @keyword;
+    }
+    &.syntax--unit {
+      color: @keyword;
+    }
+  }
+
+}
+
+
+// MARKUP
+.syntax--markup {
+  &.syntax--bold {
+    color: @markup;
+    font-weight: bold;
+  }
+
+  &.syntax--changed {
+    color: @markup;
+  }
+
+  &.syntax--deleted {
+    color: @markup;
+  }
+
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+    color: @markup;
+  }
+
+  &.syntax--inserted {
+    color: @markup;
+  }
+
+  &.syntax--italic {
+    color: @markup;
+    font-style: italic;
+  }
+
+  &.syntax--list {
+    color: @markup;
+  }
+
+  &.syntax--quote {
+    color: @markup;
+  }
+
+  &.syntax--raw.syntax--inline {
+    color: @markup;
+  }
+}
+
+
+// META
+.syntax--meta {
+
+  &.syntax--link {
+    color: @meta;
+  }
+
+  &.syntax--require {
+    color: @meta;
+  }
+
+
+  &.syntax--brace {
+    &.syntax--curly { color: @meta; }
+    &.syntax--round { color: @meta;}
+  }
+
+  &.syntax--control {
+    &.syntax--flow {
+      color: @meta;
+    }
+  }
+
+  &.syntax--comma {
+    color: @punctuation;
+  }
+
+  &.syntax--selector {
+    color: @punctuation;
+  }
+
+  &.syntax--separator {
+    background-color: @punctuation;
+    color: @punctuation;
+  }
+
+  &.syntax--tag {
+    color: @meta;
+  }
+}
+
+// NONE
+.syntax--none {
+  color: @code;
+}
+
+
+// PUNCTUATION
+.syntax--punctuation {
+  color: @punctuation;
+
+  &.syntax--terminator {
+    color: @punctuation;
+  }
+
+  &.syntax--separator {
+    color: @punctuation;
+  }
+
+  &.syntax--definition {
+
+    color: @punctuation;
+
+    &.syntax--array {
+      color: @punctuation;
+    }
+
+    &.syntax--bold {
+      color: @code;
+      font-weight: bold;
+    }
+
+    &.syntax--comment {
+      color: @comment;
+    }
+
+    &.syntax--heading,
+    &.syntax--identity,
+    &.syntax--italic {
+      color: @code;
+    }
+
+    &.syntax--italic {
+      font-style: italic;
+    }
+
+    &.syntax--string {
+      color: @string;
+      &.syntax--begin, &.syntax--end {
+        color: @string;
+      }
+    }
+
+    &.syntax--variable {
+      color: @punctuation;
+    }
+
+    &.syntax--parameters {
+      color: @code;
+    }
+
+    &.syntax--tag {
+      color: @code;
+    }
+  }
+
+  &.syntax--section.syntax--embedded {
+    color: @code;
+  }
+
+}
+
+
+
+// STRINGS
+.syntax--string {
+  color: @string;
+
+  .syntax--constant {
+    color: @variable;
+  }
+
+  &.syntax--interpolated {
+    color: @variable;
+  }
+
+  &.syntax--regexp {
+
+    // ?:input, select, textarea, button of  /^(?:input|select|textarea|button)$/i,
+    color: @regex;
+
+    .syntax--constant.syntax--character.syntax--escape,
+    .syntax--source.syntax--ruby.syntax--embedded,
+    .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
+      color: @regex;
+    }
+
+    &.syntax--group {
+      color: @regex;
+    }
+
+    &.syntax--character-class {
+      color: @regex;
+    }
+
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @regex;
+    }
+
+  }
+
+  &.syntax--unquoted {
+    color: @variable;
+  }
+
+  &.syntax--quoted {
+    &.syntax--double { color: @string; }
+    &.syntax--single { color: @string; }
+  }
+
+  .syntax--variable {
+    color: @variable;
+  }
+
+  // can't tell what this does :/
+  &.syntax--other.syntax--link {
+    color: @string;
+  }
+}
+
+
+.syntax--source {
+  color: @code;
+}
+
+// STORAGE
+.syntax--storage {
+  color: @storage;
+
+  &.syntax--modifier {
+    color: @storage;
+  }
+
+  &.syntax--type {
+    &.syntax--class {
+      color: @storage;
+    }
+    &.syntax--function {
+      color: @storage;
+    }
+    &.syntax--var {
+      color: @storage;
+    }
+  }
+
+}
+
+
+// SUPPORT
+.syntax--support {
+
+  color: @support;
+
+  &.syntax--class {
+    color: @support;
+  }
+
+  &.syntax--function  {
+    color: @support;
+    &.syntax--decl {
+      color: @support;
+    }
+  }
+
+  &.syntax--constant {
+    color: @code;
+  }
+  &.syntax--type {
+    &.syntax--property-name {
+      color: @support;
+    }
+  }
+}
+
+// VARIABLES
+.syntax--variable {
+  color: @variable;
+
+  &.syntax--control.syntax--import.syntax--include {
+    color: @variable;
+  }
+
+  &.syntax--other {
+    color: @variable;
+
+    &.syntax--property {
+      color: @variable;
+    }
+    &.syntax--module {
+      color: @variable;
+    }
+    &.syntax--module-alias {
+      color: @variable;
+    }
+    &.syntax--object {
+      color: @variable;
+    }
+  }
+
+  &.syntax--parameter {
+    &.syntax--function {
+      color: @code;
+    }
+  }
+}
