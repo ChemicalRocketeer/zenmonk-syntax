@@ -1,7 +1,7 @@
 {
   "name": "zenmonk-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "\"Zen, monklike coding.\" All code is gray, with comments in blue and strings in green.",
   "keywords": [
     "syntax",
