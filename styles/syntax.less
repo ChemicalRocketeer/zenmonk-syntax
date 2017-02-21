@@ -219,7 +219,11 @@ atom-text-editor[mini], atom-text-editor.mini {
   color: @string;
 
   .syntax--constant {
-    color: @variable;
+    color: @string;
+
+    &.syntax--escape {
+      color: @string;
+    }
   }
 
   &.syntax--interpolated {
